@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="animation.js" defer></script>
+</head>
+<body>
+  <main class="dashboard-container">
+    <h1>🌦️ All Your Weather Reports In One Place</h1>
+    
+    <section id="user_input" aria-labelledby="city-search-label">
+      <label id="city-search-label" for="cityinput" class="visually-hidden">Enter City</label>
+      <input 
+        type="text" 
+        id="cityinput" 
+        placeholder="🏙️ Enter City" 
+        autocomplete="off" 
+      />
+      <button id="submission" aria-label="Get Weather Report">🔍 Get Report</button>
+    </section>
+
+    <section id="temp_display" aria-live="polite" class="result-display"></section>
+  </main>
+</body>
+</html>
