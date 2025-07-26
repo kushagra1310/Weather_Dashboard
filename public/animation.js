@@ -10,7 +10,8 @@ window.addEventListener("DOMContentLoaded", () => {
         tempDisplay.innerHTML = "⏳ Loading weather data...";
 
         try {
-            const response=await fetch(`http://localhost:3000/weather?city=${city_name}`);
+            const backendBaseURL=location.hostname==="localhost"? "http://localhost:3000":"https://weather-dashboard-zj0c.onrender.com";
+            const response=await fetch(`${backendBaseURL}/weather?city=${city_name}`);
             if (!response.ok) {
                 throw new Error("City not found");
             }
